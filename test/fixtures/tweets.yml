@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  geo: MyString
+  user: MyString
+  date: 1.5
+  city_name: MyString
+  link: MyString
+  text: MyString
+
+two:
+  geo: MyString
+  user: MyString
+  date: 1.5
+  city_name: MyString
+  link: MyString
+  text: MyString
