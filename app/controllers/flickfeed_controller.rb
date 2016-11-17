@@ -23,7 +23,7 @@ class FlickfeedController < ApplicationController
       @geopics = Array.new
       
 
-      @geopics = flickr.photos.search(:lat=>"41",:lon=>"-87",:radius=>"300").take(20)
+      @geopics = flickr.photos.search(:lat=>"41",:lon=>"-87",:radius=>"50").take(5)
 
   end
 
