@@ -1,0 +1,2 @@
+module FlickfeedHelper
+end

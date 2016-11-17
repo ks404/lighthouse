@@ -1,0 +1,50 @@
+<!-- facebook auth files are in config/facebook.yml and config/initializers/omniauth & facebook -->
+
+<html>
+<head>
+  <title>Your Website Title</title> 
+</head>
+<body>
+
+<h1>Fblfeed#index</h1>
+<p>Find me in app/views/fblfeed/index.html.erb</p>
+
+<%= link_to "Facebook Login", '/auth/facebook' %>
+
+
+<!-- s = @graph.search('chicago', type: :video) -->
+
+
+  <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '196272320827889',
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+  <!-- Your embedded video player code -->
+  <div class="fb-video" data-href="https://www.facebook.com/facebook/videos/10153231379946729/" data-width="500" data-show-text="false">
+    <div class="fb-xfbml-parse-ignore">
+</div>
+</div>
+
+
+<div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
+
+</body>

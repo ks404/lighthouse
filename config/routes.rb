@@ -1,11 +1,24 @@
 Rails.application.routes.draw do
   
+  get 'fblfeed/index'
+
+  get 'flickfeed/index'
+
   get 'igfeed/index'
 
   resources :twfeed, :tweets
 
-  root "twfeed#index"
+  get 'tweetfeed' => "twfeed#index"
 
+  get 'perifeed' => "twfeed#periscope"
+
+  get 'flickfeed' => "flickfeed#index"
+
+  get 'fblfeed' => "fblfeed#index"
+
+  get 'auth/facebook', as: "auth_provider"
+
+  get 'auth/facebook/callback', to: 'fblfeed#login'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

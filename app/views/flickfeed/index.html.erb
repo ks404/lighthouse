@@ -1,0 +1,15 @@
+<h1>Flickfeed#index</h1>
+<p>Find me in app/views/flickfeed/index.html.erb</p>
+
+
+
+<h1> Flickr Feed </h1>
+
+<% @geopics.each do |f| %>
+
+  <%= link_to image_tag("http://farm#{f.farm}.staticflickr.com/#{f.server}/#{f.id}_#{f.secret}.jpg"), "http://flickr.com/photo.gne?id=#{f.id}" %>
+
+  <br>
+  <br>
+<% end %>
+  
