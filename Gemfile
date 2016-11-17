@@ -45,7 +45,7 @@ group :development do
   gem 'spring'
   gem 'twitter'
   gem 'flickraw'
-  gem 'omniauth-facebook' #facebook auth
-  gem 'koala' #facebook api
+ # gem 'omniauth-facebook' #facebook auth
+#  gem 'koala' #facebook api
 end
 
