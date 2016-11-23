@@ -1,4 +1,3 @@
-<!-- <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> -->
 <!--<script>
 <link rel="stylesheet" type="text/css" href="http://fastly.ink.sapo.pt/3.0.0/">
 </script>
@@ -74,18 +73,22 @@
 
         <div class="ink-grid">
 
+            <!--[if lte IE 9 ]>
+            <div class="ink-alert basic">
+                <button class="ink-dismiss">&times;</button>
+                <p><strong>You are using an outdated Internet Explorer version.</strong>
+                    Please <a href="http://browsehappy.com/">upgrade to a modern browser</a> to improve your web experience.
+                </p>
+            </div>
+            -->
+
+            <!-- Add your site or application content here -->
 
             <header class="vertical-space">
-                <h1> 
-                  <%= link_to root_url do %>
-                  Lighthouse
-                  <% end %>
-
-                  <small><strong><%=params[:locname]%></strong></small>
-                </h1>
+                <h1>Lighthouse<small>Browse by Location</small></h1>
                 <nav class="ink-navigation">
                     <ul class="menu horizontal black">
-                        <li class="active"><a href="/">Cities</a></li>
+                        <li class="active"><a href="#">Cities</a></li>
                         <li><a href="#">Events</a></li>
                         <li><a href="#">Custom</a></li>
                     </ul>
@@ -93,19 +96,74 @@
             </header>
   
 
-<% @twid.each do |f| %>
-  <div class="column-group gutters">
-     
-      <div class="all-25 small-0 tiny-0" href="/twfeed">
+    <div class="column-group gutters">
+      <div class="all-33 small-100 tiny-100" href="/twfeed">
+                
+                    <h3>Chicago</h3>
+                   
+                      <img src="/images/chicago-street.jpg" alt="chicago is cold" href="/twfeed">
+                  
+
+                 <%= link_to tweetfeed_path(:city => "41.500,-87.3043,20mi", :locname => "Chicago") do %> 
+                    <button class="quarter-top-space" class="ink-button" a href="/twfeed">Tweets</button>
+                  <% end %>
+
+                  <%= link_to flickfeed_path(:flat => "41.5", :flon => "-87.3", :frad => "20mi", :locname => "Chicago") do %> 
+                    <button class="quarter-top-space" class="ink-button" a href="/twfeed">Flickr</button>
+                  <% end %>
+
+                  <%= link_to perifeed_path(:city => "41.500,-87.3043,20mi", :locname => "Chicago") do %> 
+                    <button class="quarter-top-space" class="ink-button" a href="/twfeed">Media</button>
+                  <% end %>
+
+
       </div>
 
-      <div class="all-50 small-100 tiny-100" href="/twfeed">
-          <%= raw(f.html) %>        
+      <div class="all-33 small-100 tiny-100">
+                    <h3>Saigon</h3>
+                    <img src="/images/saigon.jpg" alt="saigon is wet">
+
+                  
+                    <%= link_to tweetfeed_path(:city => "10.8,106.6,20mi", :locname => "Saigon") do %> 
+                      <button class="quarter-top-space" class="ink-button">Tweets</button>
+                   <% end %>
+
+                    <%= link_to flickfeed_path(:flat => "10.8", :flon =>"106.6", :frad => "20mi", :locname => "Saigon") do %> 
+                      <button class="quarter-top-space" class="ink-button">Flickr</button>
+                   <% end %>
+
+                    <%= link_to perifeed_path(:city => "10.8,106.6,20mi", :locname => "Saigon") do %> 
+                      <button class="quarter-top-space" class="ink-button">Media</button>
+                   <% end %>
+                  
+
       </div>
 
-      <div class="all-25 small-0 tiny-0" href="/twfeed">
+                <div class="all-33 small-100 tiny-100">
+                    <h3>Hong Kong</h3>
+                    <img src="/images/hongkong.jpg" alt="hong kong is rich">
+
+                  <%= link_to tweetfeed_path(:city => "22.3,114.1,20mi", :locname => "Hong Kong") do %> 
+                      <button class="quarter-top-space" class="ink-button">Tweets</button>
+                   <% end %>
+
+                    <%= link_to flickfeed_path(:flat => "22.3", :flon => "114.1", :frad => "20mi", :locname => "Hong Kong") do %> 
+                      <button class="quarter-top-space" class="ink-button">Flickr</button>
+                   <% end %>
+
+                    <%= link_to perifeed_path(:city => "22.3,114.1,20mi", :locname => "Hong Kong") do %> 
+                      <button class="quarter-top-space" class="ink-button">Meda</button>
+                   <% end %>
+
+                </div>
       </div>
 
-  </div>
-<% end %>
- 
+
+<!--               column break                -->
+
+        </div>
+        <footer class="clearfix">
+
+        </footer>
+    </body>
+</html>

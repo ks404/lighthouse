@@ -4,12 +4,11 @@ require 'rubygems'
 class TwfeedController < ApplicationController
    
 
-  def index 
+  def index
 
-    @chicago = "41.500,-87.3043,50mi"
+  @city = params[:city]
 
-
-    @tweets = $tclient.search("", :result_type => "recent", :geocode => @chicago).take(5)
+    @tweets = $tclient.search("", :result_type => "recent", :geocode => @city).take(10)
     @twid = Array.new
     n=0
 
@@ -24,11 +23,10 @@ class TwfeedController < ApplicationController
 
   def periscope
 
+    @city = params[:city]
 
-    @chicago = "41.500,-87.3043,100mi"
 
-
-    @peris = $tclient.search("", :result_type => "recent", :filter => "periscope", :geocode => @chicago).take(10)
+    @peris = $tclient.search("", :result_type => "recent", :filter => "media", :geocode => @city).take(10)
     @perisid = Array.new
     n=0
 
@@ -38,5 +36,27 @@ class TwfeedController < ApplicationController
       n += 1
     end
   end
+
+
+  def othermedia
+
+    @city = params[:city]
+
+
+    @peris = $tclient.search("", :result_type => "recent", :filter => "native_video", :geocode => @city).take(10)
+    @perisid = Array.new
+    n=0
+
+  
+    @peris.each do |f|
+      @perisid[n] = $tclient.oembed(f.id)
+      n += 1
+    end
+  end
+
+
+
+
+
 
 end

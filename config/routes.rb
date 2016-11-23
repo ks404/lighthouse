@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
   
- # get 'fblfeed/index'
+  #get 'places/cityfeed' => "places#cityfeed"
 
- # get 'flickfeed/index'
+  root "places#cityfeed"
 
- # get 'igfeed/index'
 
-  resources :twfeed
+  resources :twfeed, :places
+
 
   get 'tweetfeed' => "twfeed#index"
 
