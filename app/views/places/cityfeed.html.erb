@@ -1,3 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lighthouse</title>
+  <link rel="stylesheet" media="all" href="/assets/application-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" data-turbolinks-track="true" />
+  <script src="/assets/application-257125419b18b30cf88461c860514018447010915e3864396a233e4f82d45a73.js" data-turbolinks-track="true"></script>
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="jt7t9ugso577M9llqu7B23zAHJKdkASqM1uxeD+NwFGjEnKXOJIqZlvXWUqPNbQXZp4s+8Pj8ZEDTZEqk+PvBA==" />
+
+
+</head>
+<body>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lighthouse</title>
+  <link rel="stylesheet" media="all" href="/assets/fblfeed.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" data-turbolinks-track="true" />
+<link rel="stylesheet" media="all" href="/assets/flickfeed.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" data-turbolinks-track="true" />
+<link rel="stylesheet" media="all" href="/assets/places.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" data-turbolinks-track="true" />
+<link rel="stylesheet" media="all" href="/assets/t_wfeed.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" data-turbolinks-track="true" />
+<link rel="stylesheet" media="all" href="/assets/twfeed.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" data-turbolinks-track="true" />
+<link rel="stylesheet" media="all" href="/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" data-turbolinks-track="true" />
+  <script src="/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/fblfeed.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/flickfeed.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/places.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/t_wfeed.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/twfeed.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" data-turbolinks-track="true"></script>
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="f4glCfEf9tWvueRXCroUYbCAHWkRFy2v58vnfTi9KwS3Tw4R2ZFS3VbTgSiqVZer6MQEiuM8TCj9ML37YEceDg==" />
+
+
+</head>
+<body>
+
 <!--<script>
 <link rel="stylesheet" type="text/css" href="http://fastly.ink.sapo.pt/3.0.0/">
 </script>
@@ -104,18 +142,15 @@
                       <img src="/images/chicago-street.jpg" alt="chicago is cold" href="/twfeed">
                   
 
-                 <%= link_to tweetfeed_path(:city => "41.500,-87.3043,20mi", :locname => "Chicago") do %> 
+                 <a href="/tweetfeed?city=41.500%2C-87.3043%2C20mi&amp;locname=Chicago"> 
                     <button class="quarter-top-space" class="ink-button" a href="/twfeed">Tweets</button>
-                  <% end %>
-
-                  <%= link_to flickfeed_path(:flat => "41.5", :flon => "-87.3", :frad => "20mi", :locname => "Chicago") do %> 
+</a>
+                  <a href="/flickfeed?flat=41.5&amp;flon=-87.3&amp;frad=20mi&amp;locname=Chicago"> 
                     <button class="quarter-top-space" class="ink-button" a href="/twfeed">Flickr</button>
-                  <% end %>
-
-                  <%= link_to perifeed_path(:city => "41.500,-87.3043,20mi", :locname => "Chicago") do %> 
+</a>
+                  <a href="/perifeed?city=41.500%2C-87.3043%2C20mi&amp;locname=Chicago"> 
                     <button class="quarter-top-space" class="ink-button" a href="/twfeed">Media</button>
-                  <% end %>
-
+</a>
 
       </div>
 
@@ -124,18 +159,15 @@
                     <img src="/images/saigon.jpg" alt="saigon is wet">
 
                   
-                    <%= link_to tweetfeed_path(:city => "10.8,106.6,20mi", :locname => "Saigon") do %> 
+                    <a href="/tweetfeed?city=10.8%2C106.6%2C20mi&amp;locname=Saigon"> 
                       <button class="quarter-top-space" class="ink-button">Tweets</button>
-                   <% end %>
-
-                    <%= link_to flickfeed_path(:flat => "10.8", :flon =>"106.6", :frad => "20mi", :locname => "Saigon") do %> 
+</a>
+                    <a href="/flickfeed?flat=10.8&amp;flon=106.6&amp;frad=20mi&amp;locname=Saigon"> 
                       <button class="quarter-top-space" class="ink-button">Flickr</button>
-                   <% end %>
-
-                    <%= link_to perifeed_path(:city => "10.8,106.6,20mi", :locname => "Saigon") do %> 
+</a>
+                    <a href="/perifeed?city=10.8%2C106.6%2C20mi&amp;locname=Saigon"> 
                       <button class="quarter-top-space" class="ink-button">Media</button>
-                   <% end %>
-                  
+</a>                  
 
       </div>
 
@@ -143,18 +175,15 @@
                     <h3>Hong Kong</h3>
                     <img src="/images/hongkong.jpg" alt="hong kong is rich">
 
-                  <%= link_to tweetfeed_path(:city => "22.3,114.1,20mi", :locname => "Hong Kong") do %> 
+                  <a href="/tweetfeed?city=22.3%2C114.1%2C20mi&amp;locname=Hong+Kong"> 
                       <button class="quarter-top-space" class="ink-button">Tweets</button>
-                   <% end %>
-
-                    <%= link_to flickfeed_path(:flat => "22.3", :flon => "114.1", :frad => "20mi", :locname => "Hong Kong") do %> 
+</a>
+                    <a href="/flickfeed?flat=22.3&amp;flon=114.1&amp;frad=20mi&amp;locname=Hong+Kong"> 
                       <button class="quarter-top-space" class="ink-button">Flickr</button>
-                   <% end %>
-
-                    <%= link_to perifeed_path(:city => "22.3,114.1,20mi", :locname => "Hong Kong") do %> 
+</a>
+                    <a href="/perifeed?city=22.3%2C114.1%2C20mi&amp;locname=Hong+Kong"> 
                       <button class="quarter-top-space" class="ink-button">Meda</button>
-                   <% end %>
-
+</a>
                 </div>
       </div>
 
@@ -166,4 +195,7 @@
 
         </footer>
     </body>
+</html>
+
+</body>
 </html>
