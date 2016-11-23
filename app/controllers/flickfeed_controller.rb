@@ -26,7 +26,7 @@ class FlickfeedController < ApplicationController
 
 
       @geopics = Array.new 
-      @geopics = flickr.photos.search(:lat=>@flat,:lon=>@flon,:radius=>@frad).take(5)
+      @geopics = flickr.photos.search(:lat=>@flat,:lon=>@flon,:radius=>@frad).take(10)
 
   end
 
