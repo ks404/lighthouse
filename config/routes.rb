@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   root "places#cityfeed"
 
+  get 'events' => "places#eventfeed"
+
 
   resources :twfeed, :places
 
